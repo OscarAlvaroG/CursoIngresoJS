@@ -2,6 +2,8 @@
 y luego mostrarlo por 'alert' al presionar el botón  'MOSTRAR'*/
 function Mostar()
 {
-	
+	var mensaje;
+    mensaje = prompt("Ingrese un dato");
+    alert(mensaje);
 }
 
