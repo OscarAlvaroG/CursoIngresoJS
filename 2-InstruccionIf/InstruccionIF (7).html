@@ -3,7 +3,6 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Curso Ingreso UTN FRA</title>
-
 		<!--Estilos-->
 		<link rel="stylesheet" type="text/css" href="../estilo.css">
 		<link rel="stylesheet" type="text/css" href="../animacion.css">
@@ -14,47 +13,28 @@
         <!--Final de Lógica-Programación -->
 
 	</head>
-
-
 	<body>
 		<div class="CajaUno animated bounceInDown">
-			
 			<h1>Ingrese su edad y estado civil </h1>
 			<form id="FormIngreso">
-
 				<input type="text"  placeholder="Ingrese su edad" id="edad">
-
 				<select id="estadoCivil">
 					<option value="Soltero"> Soltero </option>
 					<option value="Casado"> Casado </option>
 					<option value="Divorciado"> Divorciado </option>
 				</select>
-
-				
+				<button class="btn_nuevo" onclick="Mostrar()">Mostrar Resultado</button>
 			</form>
-			
 		</div>
-		<div class="CajaUno animated bounceInLeft">
-			
-		
-			
-			<button  class="MiBotonUTNLinea" onclick="Mostrar()" >Mostrar  informaci&oacute;n</button>
-
-		</div>
-
 		<div class="CajaEnunciado animated bounceInLeft">
 			<h2>Enunciado:</h2>
-			
 				<h3>
 					Al ingresar una edad menor a 18 años y 
 					un estado civil distinto a "Soltero", 
 					mostrar el siguiente mensaje: 'Es muy pequeño para NO ser soltero.' 
 				
 				</h3>
-			
-			
 		</div>
-
 		<div class="CajaAbajo animated bounceInUp">
 			<a  class="MiBotonUTNLinea" onclick="location.href='index.html'" >Men&uacute; ejercicios</a>	
 		</div>

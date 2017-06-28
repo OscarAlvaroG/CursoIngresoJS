@@ -1,7 +1,15 @@
-function Mostrar()
-{
-//tomo la edad  
+function Mostrar(){
+    /** creo mis variables */
 
+    var edad;
+    /** obtengo datos del Id */
+    edad = document.getElementById("edad").value;
 
-
-}//FIN DE LA FUNCIÓN
+    /** condicion de la edad y mensaje caso contrario*/
+    if (edad==15) {
+        alert("Niña Bonita");
+    }
+    else{
+        alert("Tu edad es : " +edad);
+    }
+}

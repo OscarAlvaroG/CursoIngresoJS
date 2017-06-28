@@ -82,6 +82,7 @@ left:0px;
   
   background:#f0f0f0;
   padding:6% 4%;
+  color: black;
 }
 
 input[type="text"]{
@@ -104,7 +105,12 @@ select{
   font-size:95%;
   color:#555;
 }
-
+/*estilo para el div mostrar_resultado*/
+.mostrar_resultado{
+  height: 30px;
+  padding: 2px;
+  color: black;
+}
 
 .MiBotonUTN {
   display:block;
@@ -124,6 +130,17 @@ select{
   border-radius:7px;
   transition:background .3s;
   -webkit-transition:background .3s;
+}
+/*nuevo boton, tiene errores el anterior*/
+.btn_nuevo{
+  background-color: #f50056;
+  padding: 10px;
+  color: white;
+  border-radius: 5px;
+  transition: .3s;
+  cursor: pointer;
+  border: hidden;
+  font-size: 1.3em;
 }
 
 .MiBotonUTN:hover{
