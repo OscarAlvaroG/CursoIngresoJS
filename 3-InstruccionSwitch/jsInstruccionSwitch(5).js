@@ -1,10 +1,17 @@
 function Mostrar()
 {
-//tomo la edad  
+//tomo la edad y lo convierto en Entero
 var laHora = document.getElementById('hora').value;
+laHora = parseInt(laHora);
 
-//alert (laHora);
-	
+// verifico por verdadero si la hora esta en el rango e imprimo
+switch (true) {
+    case (laHora>=7 && laHora<=11):
+        alert("Es de Mañana");
+        break;
+    default:
+        break;
+}	
 	
 
 

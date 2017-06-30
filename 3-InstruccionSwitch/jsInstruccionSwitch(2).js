@@ -13,7 +13,7 @@ function Mostrar()
 var mes;
 mes = document.getElementById("mes").value;
 
-/** si es invierno, mes julio || agosto */
+/** segun la opcion que elija, imprimo mensaje*/
 switch (mes)
 {
     case "Enero":
