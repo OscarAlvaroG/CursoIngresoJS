@@ -10,10 +10,8 @@ switch (true) {
         alert("Es de Mañana");
         break;
     default:
+        alert("Es de Tarde o De Noche");
         break;
 }	
-	
-
-
 
 }//FIN DE LA FUNCIÓN
