@@ -1,26 +1,31 @@
-var miIntervalo ;
-var contador=0;
 
+
+var miIntervalo;
+var contador=0;
+	/**  aviso de inicio*/
 function inicio()
 {
-	alert("function inicio.");
-	miIntervalo = setInterval(SegundosEnElAire, 2000);
+	//alert("El intervalo a comenzado, recibiras un mensaje cada 2 segundos.");
+	document.getElementById('total').innerHTML="Comienza el Intervalo";
+	miIntervalo = setInterval(intervalo, 2000); //llamo a la funcion cada 2 segundos
 	
-}//FIN DE LA FUNCIÓN inicio
+}
+	//la funcion cuenta cantidad de veces y envia mensaje
+function intervalo() {
 
-function SegundosEnElAire() {
+	contador = contador +1;
 
-	contador=contador +1;
-    alert("Bienvenido a la UTN FRA, cantidad ="+contador);
-    if (contador==5)
+    if (contador==5) //cuando llegue a 5 llamo funcion fin()
     {
-    	clearInterval(miIntervalo);
-    }
-}//FIN DE LA FUNCIÓN SegundosEnElAire
+		fin();
 
-function fin()
-{
-	alert("function fin.");
+    } else {
+		//alert("Bienvenido a la UTN FRA, cantidad ="+contador);
+		document.getElementById('total').innerHTML="Bienvenido a UTN FRA: "+contador;
+	}
+}
+function fin(){
 	clearInterval(miIntervalo);
-
-}//FIN DE LA FUNCIÓN fin
+	document.getElementById('total').innerHTML="El intervalo se repitio "+contador+" Veces.";
+	contador=0;
+}

@@ -1,23 +1,25 @@
 var miIntervalo ;
 var contador=0;
-
+var mensajeBienvenida = "Bienvenido a UTN FRA"
+/** muestro mensaje de unicio y comienzo el intervalo */
 function inicio()
 {
-	alert("function inicio.");
-	miIntervalo = setInterval(SegundosEnElAire, 2000);
+	document.getElementById("mostrar").innerHTML = mensajeBienvenida;
+	miIntervalo = setInterval(intervalo, 2000);
 	
-}//FIN DE LA FUNCIÓN inicio
+}
+/** cuento cantidad de veces del intervalo contador +1 */
+function intervalo() {
 
-function SegundosEnElAire() {
-
-	contador=contador +1;
-    alert("Bienvenido a la UTN FRA, cantidad ="+contador);
+	contador=contador+1;
+	document.getElementById("mostrar").innerHTML = mensajeBienvenida + " " + contador;
     
-}//FIN DE LA FUNCIÓN SegundosEnElAire
-
+}
+/** aviso que se detiene el intervalo e imprimo en pantalla*/
 function fin()
 {
-	alert("function fin.");
 	clearInterval(miIntervalo);
+	document.getElementById("mostrar").innerHTML="Fin Intervalo , Se repitio "+contador+" Veces";
+	contador = 0; // reinicio el contador, sino sigue contando
 
-}//FIN DE LA FUNCIÓN fin
+}

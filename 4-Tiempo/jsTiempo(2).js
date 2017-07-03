@@ -1,22 +1,29 @@
-var miIntervalo ;
+/**al presionar el botón INICIAR se debe
+ *  mostrar un mensaje de bienvenida
+"Bienvenidos a la UTN FRA" cada 3 segundos.
+</br>al presionar el bot&oacute;n FINALIZAR se debe detener los mensajes. */
 
+var miIntervalo ;
+var contador = 0;
+contador=parseInt(contador);
 
 function inicio()
 {
-	alert("function inicio.");
-	miIntervalo = setInterval(SegundosEnElAire, 3000);
+	document.getElementById("mostrar").innerHTML = "Comenzo el Intervalo."
+	miIntervalo = setInterval(intervalo, 3000);// 1 segundo = 1000 milisegundos
 	
-}//FIN DE LA FUNCIÓN inicio
+}//fin inicio()
 
-function SegundosEnElAire() {
-
-    alert("Bienvenido a la UTN FRA");
+function intervalo() {
+	contador = contador +1;
+	document.getElementById("mostrar").innerHTML="Bienvenidos a UTN FRA: " + contador +" Mensajes";
     
-}//FIN DE LA FUNCIÓN SegundosEnElAire
+}//fin intervalo()
 
 function fin()
 {
-	alert("function fin.");
+	document.getElementById("mostrar").innerHTML = "Fin del intervalo, se repitio: "+contador+" Veces";
 	clearTimeout(miIntervalo);
+	contador = 0;
 
-}//FIN DE LA FUNCIÓN fin
+}//fin fin()

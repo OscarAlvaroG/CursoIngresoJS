@@ -1,15 +1,17 @@
 var miIntervalo ;
+var contador;
 
 function inicio()
 {	
-	alert("function inicio.");
-	miIntervalo = setInterval(SegundosEnElAire, 3000);
+    //avisa que comenzo el intervalo y llama a la funcion.
+    document.getElementById("mostrar").innerHTML = "Comienza el mensaje en 3 Segundos";
+	miIntervalo = setInterval(intervalo, 3000);
 	
-}//FIN DE LA FUNCIÓN inicio
+}//fin inicio()
 
-function SegundosEnElAire() {
+//imprime el mensaje cuando se lo llama desde inicio()
+function intervalo() {
+   document.getElementById("mostrar").innerHTML = "Bienvenidos a UTN FRA";
 
-    alert("Bienvenido a la UTN FRA");
-
-}//FIN DE LA FUNCIÓN SegundosEnElAire
+}//fin intervalo()
 

@@ -108,7 +108,7 @@ select{
 /*estilo para el div mostrar_resultado*/
 .mostrar_resultado{
   height: 30px;
-  padding: 2px;
+  padding: 10px;
   color: black;
 }
 

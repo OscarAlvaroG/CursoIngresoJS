@@ -1,24 +1,23 @@
 var miTemporizador ;
-var contador=0;
 
 function inicio()
 {
-	document.getElementById("secreto").style.visibility="hidden";
-	alert("function inicio.");
-	miTemporizador = setTimeout(SegundosEnElAire, 3000);
+	document.getElementById("secreto").style.visibility="hidden";//al boton secreto le aplica el estilo visibilidad hidden para ocultarlo
+	document.getElementById("mostrar").innerHTML="Boton Oculto, espere 3 segundos";
+	miTemporizador = setTimeout(depues3segundos, 3000);
 	
-}//FIN DE LA FUNCIÓN inicio
+}//fin inicio()
 
-function SegundosEnElAire() {
+function depues3segundos() 
+{
 
 	document.getElementById("secreto").style.visibility="visible"; 
-    alert("Bienvenido a la UTN FRA");
+	document.getElementById("mostrar").innerHTML="Bienvenido a UTN FRA."
    
-}//FIN DE LA FUNCIÓN SegundosEnElAire
+}//foin despues3segundos()
 
 function fin()
 {
-	alert("function fin.");
-	clearTimeout(miIntervalo);
+	document.getElementById("mostrar").innerHTML="El boton ya esta visible";
 
-}//FIN DE LA FUNCIÓN fin
+}//fin fin()
