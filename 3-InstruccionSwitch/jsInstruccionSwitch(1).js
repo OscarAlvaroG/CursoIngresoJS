@@ -20,9 +20,10 @@ meses = document.getElementById("mes").value;
 */
 switch (meses) 
 {
-    case "Enero":
+    case "Enero": /** es una igualdad estricta === , la variable debe ser si o si del mismo tipo de dato */
     
         alert("Que Comience bien el año!!!");
+        //document.getElementById("mostrar").innerHTML = "Que Comience bien el año!!!"; // no aparece en pantalla
         break;
 
     case "Marzo":
@@ -39,7 +40,9 @@ switch (meses)
     
         alert("Felices Fiestas!!!");
         break;
-    default: alert("No es un mes de festejo"); break;
+    default: 
+        alert("No es un mes de festejo");
+        break;
     
 
 }

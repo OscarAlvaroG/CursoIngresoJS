@@ -22,6 +22,4 @@ switch (true) {
         break;
 }
 
-
-
 }//FIN DE LA FUNCIÓN

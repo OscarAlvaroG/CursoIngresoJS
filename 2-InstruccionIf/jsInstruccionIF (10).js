@@ -8,7 +8,8 @@ function Mostrar()
 	//creo variable
 	var nota;
 	//obtengo valores aleatorios
-	nota = Math.floor(Math.random()*10);
+	//nota = Math.floor(Math.random()*10);
+	nota = parseInt(Math.random()*(10-1))+1;
 
 	/** proceso e imprimo */
 
