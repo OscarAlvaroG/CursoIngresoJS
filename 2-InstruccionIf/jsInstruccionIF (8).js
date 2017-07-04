@@ -13,16 +13,17 @@ function Mostrar()
 
     /**obtenemos datos de los id */
 
-    edad=document.getElementById("edad").value;
+    edad = document.getElementById("edad").value;
     estadoCivil = document.getElementById("estadoCivil").value;
 
     /** comparo edad y soltero */
     /** */
-    if (edad<18 & estadoCivil!="Soltero") {
+    if (edad<=18 && estadoCivil!="Soltero") {
         
     } else {
-        if (estadoCivil=="Soltero" & edad>=18) {
-            alert("Usted es soltero y no es menor de edad");
+        if (edad>=18 && estadoCivil!="Soltero") {
+            //alert("Usted es soltero y no es menor de edad");
+            document.getElementById("mostrar").innerHTML = "Usted es soltero y no es menor de edad";
         }
     }
 

@@ -1,16 +1,10 @@
 function Mostrar()
 {
 	/** creo una variable para la repeticion */
+	/** esto no seria un FOR ? preguntarle al profesor */
 	var repetir;
-	var acumular;
-	acumular = parseInt(acumular);
 	for (repetir = 0; repetir <= 10; repetir++) {
-	// Se ejecuta 10 veces, con valores desde paso desde 0 hasta 4.
-	alert("Numero de Itereacion: "+repetir);
-	
-};
-	document.getElementById("repetir").value = repetir-1;	
-
-
-
-}//FIN DE LA FUNCIÓN
+		alert("Numero de Itereacion: "+repetir);
+	};
+	document.getElementById("repetir").value = "Se repitieron : "+(repetir-1) +" Veces";	
+}//fin mostrar()

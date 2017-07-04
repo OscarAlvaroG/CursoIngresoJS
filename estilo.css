@@ -141,6 +141,7 @@ select{
   cursor: pointer;
   border: hidden;
   font-size: 1.3em;
+  margin-top: 10px;
 }
 
 .MiBotonUTN:hover{

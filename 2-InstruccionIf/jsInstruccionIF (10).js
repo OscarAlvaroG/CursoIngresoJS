@@ -14,12 +14,15 @@ function Mostrar()
 	/** proceso e imprimo */
 
 	if (nota== 9 || nota==10) {
-		alert("Excelente! Te sacaste: "+nota)
+		//alert("Excelente! Te sacaste: "+nota)
+		document.getElementById("mostrar").innerHTML = "Excelente! Te sacaste: "+nota;
 	} else {
 		if (nota>4) {
-			alert("Aprobado, tu nota es: "+nota);
+			//alert("Aprobado, tu nota es: "+nota);
+			document.getElementById("mostrar").innerHTML = "Aprobado, tu nota es: "+nota;
 		} else {
-			alert("Vamos!, la proxima se puede! Tu nota es: "+nota);
+			//alert("Vamos!, la proxima se puede! Tu nota es: "+nota);
+			document.getElementById("mostrar").innerHTML = "Vamos!, la proxima se puede!, tu nota es : "+nota;
 		}
 	}
 	
