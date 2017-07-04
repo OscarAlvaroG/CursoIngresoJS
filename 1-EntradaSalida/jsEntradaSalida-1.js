@@ -4,5 +4,6 @@ function Mostar()
   /* agrego mostrar dato en el campo vacio */
   var mensaje = "Esto va de Diez";
   document.getElementById("mostrar").innerHTML = mensaje;
+  alert('editando desde linux');
 }
 
