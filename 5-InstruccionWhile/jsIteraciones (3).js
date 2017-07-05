@@ -11,3 +11,11 @@ function Mostrar()
 
 
 }//fin mostrar()
+
+/*
+    while(cndicion){
+        if(condicion){
+            continue ; // si quiero detener la ejecucion y volver al principio
+        }
+    }
+*/

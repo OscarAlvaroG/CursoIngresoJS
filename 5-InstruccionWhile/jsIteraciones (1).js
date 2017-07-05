@@ -8,3 +8,13 @@ function Mostrar()
 	};
 	document.getElementById("repetir").value = "Se repitieron : "+(repetir-1) +" Veces";	
 }//fin mostrar()
+
+function enclase(){
+	var numero = 0 ;
+	while(numero<=9){
+		numero = numero +1;
+		alert(numero);
+		document.getElementById('mostrar').innerHTML = "Se repitieron : "+numero+"Veces";
+	}
+}
+
