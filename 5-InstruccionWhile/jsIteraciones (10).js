@@ -14,7 +14,7 @@ function queriasDificilToma(){
 
 	var respuesta = confirm("¿ Seguro de Continuar ?");
 	while (respuesta == true) {
-		
+		// faltaria validar la entrada de numeros, que no pueda ingresar texto.
 		numero = prompt('Ingrese un Numero');
 		numero = parseInt(numero);
 
@@ -29,7 +29,7 @@ function queriasDificilToma(){
 		else if (numero == 0){
 			c_ceros = c_ceros + 1;
 		}
-		//numeros pares ? preguntar profesor
+		//numeros pares ? preguntar profesor, alguna funcion en javascript ? 
 
 		respuesta = confirm('¿ Continuar ?');
 	}
