@@ -143,6 +143,9 @@ select{
   font-size: 1.3em;
   margin-top: 10px;
 }
+.div_alto {
+  height: 200px;
+}
 
 .MiBotonUTN:hover{
   background:#1BA045;
