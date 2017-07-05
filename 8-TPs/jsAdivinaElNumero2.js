@@ -15,6 +15,8 @@ var contadorIntentos;
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
+
+
 	 
 	
 
@@ -22,6 +24,7 @@ function comenzar()
 
 function verificar()
 {
+	//verifico si intentos=1, =2 , =3, =4, =5,  >=6 && <10  , >=10
 	
 	
 

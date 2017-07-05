@@ -69,7 +69,7 @@ function Materiales ()
     cal_total = (superficie * cal);
 
     //
-    alert("Se requiere : "+cemento_total+" Bolsas de Cemento y "+cal_total);
+    alert("Se requiere : "+cemento_total+" Bolsas de Cemento y "+cal_total+" Bolsas de Cal");
 
 
 

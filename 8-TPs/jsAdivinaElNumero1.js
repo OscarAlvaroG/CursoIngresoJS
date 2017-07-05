@@ -24,7 +24,8 @@ function verificar()
   //cuento los intentos
   intentos = intentos +1;
   if(n_usuario==numeroSecreto){
-     alert('Ganaste!, en '+intentos +"Intentos");
+     alert('Ganaste!, en '+intentos +" Intentos");
+     document.getElementById('intentos').value = "Ganaste despues de "+intentos+" Intentos";
      intentos = 0;
 
   } else {
