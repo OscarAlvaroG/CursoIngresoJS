@@ -24,7 +24,7 @@ function comenzar()
 
 function verificar()
 {
-	//verifico si intentos=1, =2 , =3, =4, =5,  >=6 && <10  , >=10
+	//verifico si intentos=1, =2 , =3, =4, =5,  >=6 && <10  , >=10	
 	
 	
 
