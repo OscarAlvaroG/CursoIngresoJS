@@ -38,7 +38,7 @@ function Circulo ()
     radio = 2*Math.PI*radio;
 
     // cantidad de alambres
-    alambres = radio * 3;
+    alambres =  Math.floor( radio * 3); // redondeo
 
     alert("Necesitas "+alambres+" metros de Alambres");
 
