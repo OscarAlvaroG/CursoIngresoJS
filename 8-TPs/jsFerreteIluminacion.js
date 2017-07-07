@@ -21,21 +21,32 @@ function CalcularPrecio ()
     cantidad = document.getElementById('Cantidad').value;
     cantidad = parseInt(cantidad);
     empresa = document.getElementById('Marca').value;
-    
-    if(cantidad > 5){
-        p_final = (precio * cantidad) * .50; //5x35 = 175 - descuento(50%) = 87,50
-    } else if ( cantidad == 5 && empresa == 'ArgentinaLuz') { 
-        p_final = (precio * cantidad) * .60; //5x35 = 175 - descuento(40%) = 105
-    } else if ( cantidad == 5 && empresa !='ArgentinaLuz') {
-        p_final = (precio * cantidad) * .70; //5x35 = 175 - descuento(30%) = 122,50
-    } else if ( cantidad == 4 && (empresa =='ArgentinaLuz' || empresa == 'FelipeLamparas')) {
-        p_final = (precio * cantidad) * .75; //5x35 = 175 - descuento(25%) = 131,50
-    } else if ( cantidad == 4 && !(empresa =='ArgentinaLuz' || empresa == 'FelipeLamparas')) {
-        p_final = (precio * cantidad) * .80; //5x35 = 175 - descuento(80%) = 140
+    //valido que los datos sean validos
+    if(cantidad>=1){
+        if (cantidad > 5){
+            p_final = (precio * cantidad) * .50; //10x35 = 350 - descuento(50%) = 175
+            console.log('Se aplico un 50% por comprar mas de 6 Productos:'+p_final);
+        } else if ( cantidad == 5 && empresa == 'ArgentinaLuz') { 
+            p_final = (precio * cantidad) * .60; //5x35 = 175 - descuento(40%) = 105
+            console.log('Como compro 5 unidades Marca ArgentinaLuz se aplica 40% Off: '+p_final);
+        } else if ( cantidad == 5 && empresa !='ArgentinaLuz') {
+            p_final = (precio * cantidad) * .70; //5x35 = 175 - descuento(30%) = 122,50
+            console.log('Descuento del 30% off por comprar 5 unidades de otras Empresas:'+p_final);
+        } else if ( cantidad == 4 && (empresa =='ArgentinaLuz' || empresa == 'FelipeLamparas')) {
+            p_final = (precio * cantidad) * .75; //4x35 = 140 - descuento(25%) = 105
+            console.log('25% OFF Por comprar 4 unidades de Empresa:'+empresa+" a pagar :"+p_final);
+        } else if ( cantidad == 4 && !(empresa =='ArgentinaLuz' || empresa == 'FelipeLamparas')) {
+            p_final = (precio * cantidad) * .80; //4x35 = 175 - descuento(80%) = 112
+            console.log('Por comprar 4 unidades de Otras Marcas, 20% Off :'+p_final);
+        }
+        // falta agregar condicion para 3 unidades
+        else{
+            p_final  = precio * cantidad;
+            console.log('El precio a pagar es : '+p_final);
+        }
+
+    } else {
+        alert('Debes ingresar un Valor Mayor a 1');
     }
 
-    //ver si conviene un switch
-
-    console.log('EL precio final es de :'+p_final);
- 	
 }
