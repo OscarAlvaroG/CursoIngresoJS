@@ -4,22 +4,22 @@ function Mostrar()
 	var contador=0;
 	var acumulador=0;
 	var total = 0;
-	var respuesta = true;
 	var promedio; 
-
+	var respuesta = true;
+	
+	total = parseInt(total);
 	contador = parseInt(contador);
 
-	/** pregunto si quiere seguir ingresando numeros */
-	respuesta = confirm('Esta Seguro de Comenzar');
-	//acumulador = prompt('Ingrese un numero');
-	while(respuesta == true){
+	while(respuesta ==true){
 
-		contador = contador +1;
+		contador = ++contador;
 		acumulador = prompt('Ingresa un Numero');
 		acumulador = parseInt(acumulador);
 		total = total + acumulador;
 
-		respuesta = confirm('Queres Seguir Ingresando Numeros ? ');
+		/** pregunto si quiere seguir ingresando numeros */
+
+		respuesta = confirm('Queres Seguir Ingresando Numeros ? "si" o "no" ');
 
 	}
 	promedio = total / contador;

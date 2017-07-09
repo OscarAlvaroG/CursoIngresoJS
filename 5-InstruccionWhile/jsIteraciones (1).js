@@ -10,11 +10,10 @@ function Mostrar()
 }//fin mostrar()
 
 function enclase(){
-	var numero = 0 ;
-	while(numero<=9){
+	var numero = 1;
+	while(numero<=10){
 		numero = numero +1;
-		alert(numero);
-		document.getElementById('mostrar').innerHTML = "Se repitieron : "+numero+"Veces";
+		alert('Nº'+(numero-1));
+		document.getElementById('mostrar').innerHTML = "Se repitieron : "+(numero-1)+"Veces";
 	}
 }
-
