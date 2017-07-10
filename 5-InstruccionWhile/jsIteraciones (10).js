@@ -1,7 +1,7 @@
 function queriasDificilToma(){
 
 	// creo variables
-	var numero = 0;
+	var numero;
 	var sum_neg = 0;
 	var sum_pos = 0;
 	var c_pos = 0;   // contador positivos
@@ -14,23 +14,25 @@ function queriasDificilToma(){
 	var respuesta = true;
 
 	while (respuesta == true) {
-		// faltaria validar la entrada de numeros, que no pueda ingresar texto.
+		// pindo ingresar numeros
 		numero = prompt('Ingrese un Numero');
 		numero = parseInt(numero);
-
-		while(!isNaN(numero)){
+		// validacion de entrada de numeros
+		while(isNaN(numero)){
 			numero = prompt('Ingrese Solo Numeros');
 			numero = parseInt(numero);
 		}
-
+		// sumo y cuento los negativos
 		if (numero<0){
 			sum_neg = sum_neg + numero;
 			c_neg = c_neg + 1;
 		}
+		// sumo y cuento los positivos
 		else if (numero>0){
 			sum_pos = sum_pos + numero;
 			c_pos = c_pos + 1;
 		}
+		// cuento los Ceros
 		else if (numero == 0){
 			c_ceros = c_ceros + 1;
 		}
@@ -39,7 +41,7 @@ function queriasDificilToma(){
 			c_pares++;
 		}
 		
-
+		// pregunto si quiere seguir ingresando datos
 		respuesta = confirm('¿ Continuar ?');
 	}
 
