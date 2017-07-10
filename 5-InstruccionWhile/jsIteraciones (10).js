@@ -15,6 +15,8 @@ function queriasDificilToma(){
 	var respuesta = confirm("¿ Seguro de Continuar ?");
 	while (respuesta == true) {
 		// faltaria validar la entrada de numeros, que no pueda ingresar texto.
+		//if(numero%2==0)
+		// c_pares = c_pares +1;
 		numero = prompt('Ingrese un Numero');
 		numero = parseInt(numero);
 
@@ -29,6 +31,9 @@ function queriasDificilToma(){
 		else if (numero == 0){
 			c_ceros = c_ceros + 1;
 		}
+		if(numero%2==0){
+			c_pares++;
+		}
 		//numeros pares ? preguntar profesor, alguna funcion en javascript ? 
 
 		respuesta = confirm('¿ Continuar ?');
@@ -41,8 +46,8 @@ function queriasDificilToma(){
 
 	dif_pos_neg = sum_pos + sum_neg;
 
-	document.getElementById('mostrar').innerHTML="La suma de Negativos es: "+sum_neg+"</br> La suma de positivos es: "+sum_pos+" </br> Cantidad Nros Positivos: "+c_pos+" </br> Cantidad Negativos: "+c_neg+"</br> Cantidad de Ceros: "+c_ceros+" </br> Cantidad de Pares: "+"</br> Promedio de Positivos: "+pro_pos+"</br> Promedio de Negativos "+pro_neg+"</br> Positivos - Negativos: "+dif_pos_neg;
-
+	document.write("La suma de Negativos es: "+sum_neg+"</br> La suma de positivos es: "+sum_pos+" </br> Cantidad Nros Positivos: "+c_pos+" </br> Cantidad Negativos: "+c_neg+"</br> Cantidad de Ceros: "+c_ceros+" </br> Cantidad de Pares: "+c_pares+"</br> Promedio de Positivos: "+pro_pos+"</br> Promedio de Negativos "+pro_neg+"</br> Positivos - Negativos: "+dif_pos_neg);
+	// mandarlo por el inner
 
 
 }

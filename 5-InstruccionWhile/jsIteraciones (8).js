@@ -1,6 +1,6 @@
 function Mostrar()
 {
-
+	var numero;
 	var contador=0;
 	var positivo=0;
 	var negativo=1; //pongo en 1 porque en cero siempre dara 0.
@@ -10,15 +10,15 @@ function Mostrar()
 	respuesta = confirm('Seguro de Comenzar? ') ;
 	while(respuesta == true){
 		
-		acumulador = prompt('ingrese un numero');
-		acumulador = parseInt(acumulador);
-		if(acumulador>=0){
-			// cumar los positivos
-			positivo = positivo + acumulador;
+		numero = prompt('ingrese un numero');
+		numero = parseInt(numero);
+		if(numero>=0){
+			// sumar los positivos
+			positivo = positivo + numero;
 			contadorPositivos = contadorPositivos +1;
 		} else {
 			// multiplico los negativos
-			negativo = negativo * acumulador;
+			negativo = negativo * numero;
 			contadorNegativos = contadorNegativos +1;
 
 		}

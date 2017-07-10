@@ -1,29 +1,32 @@
 function MaxMin(){
 	//variables
 
-	var max = 0;
-	var min = 0;
+	var max;
+	var min;
 	var numero;
-	var contador = 0;
+	var contador = 0; // para verificar la primera vez
+	var respuesta = true; // para el while
 
 	//pido datos
-
-	respuesta = confirm('Seguro de Continuar')
 	while(respuesta==true){
 		numero = prompt('ingrese un numero');
 		numero = parseInt(numero);
 		contador = contador +1;
 		// inicio max y min como primer dato. y que entre la primera vez
-		if (contador == 1) {
+		if (contador == 1){
 			max = numero;
 			min = numero;
-		}
-		if(numero > max){
+		} else {
+			//asigno el maximo
+			if(numero > max){
 			max = numero;
+			}
+			//asigno el minimo
+			if (numero < min){
+				min  = numero;
+			}
 		}
-		if (numero < min) {
-			min  = numero;
-		}
+		
 
 		// pregunto si quiere seguir
 		respuesta = confirm('Quiere continuar ? ');
@@ -33,10 +36,6 @@ function MaxMin(){
 
 	document.getElementById('maximo').value = "El numero Maximo es: "+max;
 	document.getElementById('minimo').value = 'El numero Minimo es: '+min;
-
-	//reininio variables para comenzar de nuevo
-	max = 0;
-	min = 0;
 }
 
 
