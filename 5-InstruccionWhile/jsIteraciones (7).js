@@ -2,59 +2,32 @@ function Mostrar()
 {
 
 	var contador=0;
-	var acumulador=0;
-	var total = 0;
-	var promedio; 
+	var numero;
+	var total=0;
+	var promedio = 0; 
 	var respuesta = true;
-	
-	total = parseInt(total);
-	contador = parseInt(contador);
 
-	while(respuesta ==true){
+	while(respuesta){
 
-		contador = ++contador;
-		acumulador = prompt('Ingresa un Numero o 0 Para Cancelar');
-		acumulador = parseInt(acumulador);
-		total = total + acumulador;
+		contador++
+		numero = prompt('Ingresa un Numero');
+		numero = parseInt(numero);
+		// valido solo numeros
+		while(isNaN(numero)){
+			numero = prompt("Ingresa Solo Numeros")
+			numero = parseInt(numero);
+		}
+		total = total + numero;
 
 		/** pregunto si quiere seguir ingresando numeros */
+		respuesta = confirm('Queres Seguir Ingresando Numeros ?');
 
-		respuesta = confirm('Queres Seguir Ingresando Numeros ? "si" o "no" ');
+	}//fin while respuesta
 
-	}
+	// calculo promedio e informo
 	promedio = total / contador;
 
-	document.getElementById('suma').value=total;
-	document.getElementById('promedio').value=promedio;
+	document.getElementById('suma').value="El total es: "+total;
+	document.getElementById('promedio').value="El promedio es: "+promedio;
 
 }//FIN DE LA FUNCIÓN
-
-function enclase(){
-
-	var contador=0;
-	var numero = 0;
-	var total = 0;
-	var promedio = 0; 
-	total = parseInt(total);
-
-	console.log(numero);
-
-	while(!isNaN(numero)){
-
-		contador = ++contador;
-		contador = parseInt(contador);
-		numero = prompt('Ingresa Un Numero');
-		numero = parseInt(numero);
-		console.log(numero);
-		total = total + numero;
-		total = parseInt(total);
-
-	}
-	promedio = total / contador;
-
-	document.getElementById('suma').value=total;
-	document.getElementById('promedio').value=promedio;
-	console.log(contador);
-	console.log(total);
-
-}

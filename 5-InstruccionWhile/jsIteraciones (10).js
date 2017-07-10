@@ -2,18 +2,18 @@ function queriasDificilToma(){
 
 	// creo variables
 	var numero;
-	var sum_neg = 0;
-	var sum_pos = 0;
+	var sum_neg = 0; // acumulador de Negativos
+	var sum_pos = 0; //acumulador de positivos
 	var c_pos = 0;   // contador positivos
 	var c_neg = 0;   //contador negativos
 	var c_ceros = 0; //contador ceros
 	var c_pares = 0; //contador de nros pares
 	var pro_pos = 0; //promedio positivos
 	var pro_neg = 0; //promedio negativos
-	var dif_pos_neg = 0;
-	var respuesta = true;
+	var dif_pos_neg = 0; //para diferencia de positivos y negstivos
+	var respuesta = true; // para el primer while
 
-	while (respuesta == true) {
+	while (respuesta) {
 		// pindo ingresar numeros
 		numero = prompt('Ingrese un Numero');
 		numero = parseInt(numero);
