@@ -93,7 +93,9 @@ function punto5(){
     dia = prompt('Ingrese un Dia, Ejemplo: Lunes');
 
     switch (dia){
+        case "domingo":
         case "Domingo":
+        case 'sabado':
         case "Sabado":
             alert('Es Fin de Semana');
             break;
