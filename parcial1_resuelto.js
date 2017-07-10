@@ -136,7 +136,7 @@ function punto6(){
             importe=prompt('Solo Numeros > 0. Nº'+c_dias);
             importe = parseInt(importe);    
         }
-        // si es el primer ingreso y se trunca max y min son los mismos
+        // si es el primer ingreso asigno importe a max y min
         if(primeravez){
             min = importe;
             max = importe;
