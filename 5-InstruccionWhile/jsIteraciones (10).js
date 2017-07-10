@@ -52,8 +52,8 @@ function queriasDificilToma(){
 
 	dif_pos_neg = sum_pos + sum_neg;
 	// Muestro  en pantalla toda la informacion.
-	document.write("La suma de Negativos es: "+sum_neg+"</br> La suma de positivos es: "+sum_pos+" </br> Cantidad Nros Positivos: "+c_pos+" </br> Cantidad Negativos: "+c_neg+"</br> Cantidad de Ceros: "+c_ceros+" </br> Cantidad de Pares: "+c_pares+"</br> Promedio de Positivos: "+pro_pos+"</br> Promedio de Negativos "+pro_neg+"</br> Positivos - Negativos: "+dif_pos_neg);
-	// mandarlo por el inner
+	// para que funcione el agregar en el html <p id="resultados"></p>
+	document.getElementById("resultados").innerHTML = "La suma de Negativos es: "+sum_neg+"</br> La suma de positivos es: "+sum_pos+" </br> Cantidad Nros Positivos: "+c_pos+" </br> Cantidad Negativos: "+c_neg+"</br> Cantidad de Ceros: "+c_ceros+" </br> Cantidad de Pares: "+c_pares+"</br> Promedio de Positivos: "+pro_pos+"</br> Promedio de Negativos "+pro_neg+"</br> Positivos - Negativos: "+dif_pos_neg;
 
 
 }
