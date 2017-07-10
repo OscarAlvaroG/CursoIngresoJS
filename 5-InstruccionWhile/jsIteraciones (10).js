@@ -12,11 +12,16 @@ function queriasDificilToma(){
 	var pro_neg = 0; //promedio negativos
 	var dif_pos_neg = 0;
 	var respuesta = true;
-	
+
 	while (respuesta == true) {
 		// faltaria validar la entrada de numeros, que no pueda ingresar texto.
 		numero = prompt('Ingrese un Numero');
 		numero = parseInt(numero);
+
+		while(!isNaN(numero)){
+			numero = prompt('Ingrese Solo Numeros');
+			numero = parseInt(numero);
+		}
 
 		if (numero<0){
 			sum_neg = sum_neg + numero;
