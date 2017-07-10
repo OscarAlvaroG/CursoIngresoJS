@@ -29,7 +29,6 @@ function Mostrar()
 
 }//FIN DE LA FUNCIÓN
 
-
 function enclase(){
 
 	var contador=0;
