@@ -28,7 +28,7 @@ function punto2(){
     var impuesto = 1.21;
     var total;
     importe = prompt('Ingrese el Importe');
-    importe = Math.floor(importe);
+    importe = Math.floor(importe); // redondeo
 
     total = importe * impuesto;
 
@@ -91,16 +91,22 @@ function punto5(){
     var dia;
 
     dia = prompt('Ingrese un Dia, Ejemplo: Lunes');
+    dia = dia.toLowerCase(); // convierto a minusculas para no caer en default
 
     switch (dia){
         case "domingo":
-        case "Domingo":
         case 'sabado':
-        case "Sabado":
             alert('Es Fin de Semana');
             break;
+        case "lunes":
+        case "martes":
+        case "miercoles":
+        case "jueves":
+        case "viernes":
+            alert("A trabajar!");
+            break;
         default:
-            alert('A trabajar');
+            alert("Ese Dia no Existe");
             break;
     }
 }
@@ -114,21 +120,29 @@ importe de venta.
 function punto6(){
     // creo mis variables
     var importe;
-    var c_dias  = 1;
-    var max = 0;
-    var min = 0;
+    var c_dias  = 0;
+    var max;
+    var min;
+    var primeravez = true;
     //bucle de 24 dias e ingreso los importes
     while (c_dias < 24 ) {
-        
-        importe=prompt('Ingrese Importe de La Venta Nº'+c_dias);
+        c_dias++; // cuento los dias
+        importe = prompt('Ingrese Importe. Venta Nº'+c_dias);
         importe = parseInt(importe);
+        console.log(importe);
+        
+        // validacion de ingreso de solo numeros
+        while(isNaN(importe) || importe <1 ){
+            importe=prompt('Solo Numeros > 0. Nº'+c_dias);
+            importe = parseInt(importe);    
+        }
         // si es el primer ingreso y se trunca max y min son los mismos
-        if(c_dias == 1){
+        if(primeravez){
             min = importe;
             max = importe;
-        }
-        // si el importe es valido comparo max y min
-        if (importe>0) {
+            primeravez = false;
+        } else {
+             // comparo max y min
             if(importe>max){
                 max = importe;
             }
@@ -136,21 +150,18 @@ function punto6(){
                 min = importe;
             }
 
-        } else { // si el usuario ingresa una letra o un numero negativo se detiene la ejecucion y resetea el contador
-            alert('Ingresa un Importe Mayor a 0');
-            c_dias = 1;
-            break;
-        }
+        }//fin else
+       
+    } //fin while <=24
 
-        c_dias = c_dias + 1; // si todo marcho bien sumo 1 al contador para continuar el bucle
-
-    }
     // imprimo en pantalla los resultados
     console.log('Se ingresaron: '+c_dias+' Dias')
     console.log('El importe Mayor Fue: $'+max);
     console.log('El importe Menor Fue: $'+min);
   
 }
+
+
 
 /**
  * 7- realizar el algoritmo que permita el ingreso por prompt de las notas (validar entre 0 y 10) y el sexo
