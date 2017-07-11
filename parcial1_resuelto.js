@@ -172,6 +172,7 @@ function punto6(){
 */
 
 // preguntar profesor porque cuenta 6 veces en lugar de 5
+// porque se debe contar al principio no al final :)
 
 function punto7(){
 
