@@ -9,6 +9,7 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 */
 var numeroSecreto; 
 var intentos = 0;
+var n_usuario;
 
 function comenzar()
 {
@@ -38,9 +39,6 @@ function verificar()
   } 
   else if (n_usuario<numeroSecreto){
     alert("Todavia falta para el numero secreto");
-  }
-  else{
-    
   }
 
 }
