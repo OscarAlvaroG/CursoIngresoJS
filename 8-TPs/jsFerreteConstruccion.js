@@ -24,10 +24,6 @@ function Rectangulo ()
     //saco la cantidad de alambres
     alambres = perimetro * 3;
     alert("Necesitas: "+alambres+" metros de Alambres");
-
-
-
-
 }
 function Circulo () 
 {
@@ -41,8 +37,6 @@ function Circulo ()
     alambres =  Math.floor( radio * 3); // redondeo
 
     alert("Necesitas "+alambres+" metros de Alambres");
-
-	
 }
 function Materiales () 
 {
@@ -54,10 +48,8 @@ function Materiales ()
     ancho = parseInt(ancho);
     radio = document.getElementById('Radio').value;
     radio = parseInt(radio);
-
-
+	
     // saco m2
-
     superficie = largo * ancho;
 
     //pi*radio*radio , falta informar
@@ -70,8 +62,5 @@ function Materiales ()
 
     //
     alert("Se requiere : "+cemento_total+" Bolsas de Cemento y "+cal_total+" Bolsas de Cal");
-
-
-
-
+	
 }
