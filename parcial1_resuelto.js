@@ -177,43 +177,51 @@ function punto7(){
 
     var nota;
     var notaTotal = 0;
-    var c_alumnos = 1;
+    var c_alumnos = 0;
     var min;
     var c_6omas = 0;
     var promedio = 0;
+    var primeravez = true;
 
-    while(c_alumnos>=0 && c_alumnos<=5){
+    while(c_alumnos<10){ // para la soluicion pongo solo 10, pero pide 100
+        c_alumnos++
         nota = prompt('Nota Nº'+c_alumnos);
         nota = parseInt(nota);
+        //valido que sea solo numeros
+        while(isNaN(nota) || nota < 0 || nota > 10){
+            nota = prompt('Solo Numeros entre 0 y 10. Ingrese Nota Nº'+c_alumnos);
+            nota = parseInt(nota);
+        }
         sexo = prompt('Ingrese el Sexo: "m" o "f" para la nota Nº'+c_alumnos);
+        sexo = sexo.toLowerCase();
+        //valido que sea solo f o m
+        while(!(sexo=="m" || sexo=="f")){
+            sexo = prompt('Invalido. Ingrese "m" o "f" para la nota Nº'+c_alumnos);
+            sexo = sexo.toLowerCase();
+        }
         //nota baja la primera vez
-        if(c_alumnos==1){
+        if(primeravez){
             min = nota;
+            min = parseInt(min);
+            primeravez = false;
         }
-        // si nota esta entre 0 y 10
-        if(nota>=0 && nota<=10){
-            if(nota>=6 && sexo == "m"){
-                c_6omas = c_6omas + 1; // cuento los varones que sacaron 6 o mas
+        //cuento los varones que sacaron 6 o mas
+        if(nota>=6 && sexo == "m"){
+                c_6omas = c_6omas + 1; 
                 c_6omas = parseInt(c_6omas);
-            }
-            if(nota<min){
-                min = nota;
-                min = parseInt(min);
-            }
-        }//fin if 0 y 10 si no esta en el rango termino la ejecucion.
-        else {
-            alert('Los datos ingresados son Invalidos');
-            c_alumnos = 1;
-            break;
         }
-        //si todo ok, sumo un alumno y comienza de nuevo
+        if(nota<min){
+                min = nota;
+        }
+        
+        //acumulo notas
         notaTotal = notaTotal + nota;
-        c_alumnos = ++c_alumnos;
 
     }//fin while
 
-    promedio = notaTotal / (c_alumnos-1);// le resto uno porque me toma uno mas
-    console.log('Total de Alumnos: '+(c_alumnos-1));
+    promedio = notaTotal / c_alumnos;// le resto uno porque me toma uno mas
+    console.log('Total de Alumnos: '+c_alumnos);
+    console.log('La sumatoria de las notas: '+notaTotal);
     console.log('La nota mas baja '+min);
     console.log('Varones con Notas Mayores a 6: '+c_6omas);
     console.log('El promedio de notas es: '+promedio);
@@ -235,47 +243,46 @@ function punto8(){
     var c_pares = 0;
     var promedio = 0;
     var total = 0;
-    var min = 0;
-    var max = 0;
+    var min;
+    var max;
     var respuesta = true;
+    var primeravez = true;
 
-    while(respuesta==true){
-        numero=prompt('Ingrese un Numero');
+    while(respuesta){
+        contador++;
+        numero = prompt('Ingrese un Numero');
         numero = parseInt(numero);
-        // la primera vez le asigno el minimo y el maximo
-        if(contador ==1){
-            min = numero;
-            max = numero;
+        //valido que no sean letras y negativos
+        while(isNaN(numero) || numero<1){
+            numero = prompt('No Valido. Solo Numeros Positivos.');
+            numero = parseInt(numero);
         }
-        // valido numeros positivos
-        if(numero>0){
-            // cuento numeros pares
-            if(numero % 2 == 0){
-                c_pares = c_pares +1;
-            }
-            // determino maximo
-            if(numero>max){
-                max = numero;
-            }
-            // determino el minimo
-            if(numero<min){
+        //asigno mismo valor a max y min la primera vez
+        if(primeravez){
                 min = numero;
-            }
-            
-        } else {
-            alert('Solo puede Ingresar Numeros Positivos, Vuelva a Empezar');
-            break;
-
+                max = numero;
+                primeravez = false;
+        }   
+        // cuento los pares
+        if(numero % 2 == 0){
+                c_pares++;
         }
+        //determino maximo y minimo
+        if(numero>max){
+                max = numero;
+        } else if(numero<min) {
+                min = numero;
+        }
+        //acumulo las notas
         total = total + numero;
-        contador = contador + 1;
-        respuesta = confirm('Desea Seguir Ingresando');
-    }
+        respuesta = confirm('Desea Seguir Ingresando?');
+    }//fin while respuesta
 
     promedio = total / contador;
+
+    //imprimo en pantalla
     document.write('Cantidad de numeros pares: '+c_pares);
     document.write('</br>El promedio de todos los numeros ingresados es: '+promedio);
     document.write('</br>La suma de todos los numeros es: '+total);
     document.write('</br>El numero Maximo es: '+max+' y El Minimo es: '+min);
-
 }
