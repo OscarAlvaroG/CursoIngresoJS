@@ -42,7 +42,7 @@ function NumerosImpares(){
                 c_negativos++
             }
         }//fin for
-       console.log("La cantidad de Impares es: "+c_negativos);
+       console.log("La cantidad de Impares es: " + c_negativos);
     }//fin else
 }
 
@@ -61,7 +61,7 @@ function NumerosDivisibles(){
                 c_divisibles++;
             }
         }
-        console.log("Se encontro: " + c_divisibles +" Numeros Divisibles");   
+        console.log("Se encontro: " + c_divisibles + " Numeros Divisibles");   
     }
   
 
